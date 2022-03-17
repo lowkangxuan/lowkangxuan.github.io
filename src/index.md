@@ -3,18 +3,18 @@ layout: home.njk
 title: Kang Xuan
 ---
 
-### Hello!
+### Hello!👋
 <p>I am Kang Xuan, a student who enjoys gaming and passionate in Game Development.</p>
 <p>Currently residing in Singapore studying for a Diploma in Immersive Media at Ngee Ann Polytechnic.</p>
 
 ### Over the Years
-<p>Find out what I have done and what I am up to :)</p>
+<p>Find out what I have accomplished and what I am currently up to.</p>
 
 <div class="position-relative mt-5">
     <div class="timeline">
     <div class="timeline--content">
-        <p class="fst-italic"><a href="https://twitter.com/who82848582">Let's explore together :D</a></p>
-        <p class="year">The Future</p>
+        <p class="fst-italic"><a href="https://twitter.com/who82848582">Let's explore my future together :D</a></p>
+        <p class="year">Future</p>
     </div>
     <div class="timeline--content">
         <p class="fw-bold">📝 Capstone Project</p>

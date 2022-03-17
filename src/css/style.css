@@ -9,8 +9,24 @@ body {
     padding: 0;
 }
 
+/*
+Paragraph designs
+*/
 p {
     letter-spacing: 1px;
+}
+
+p::before {
+    content: "//";
+    color: #d7d7d7;
+    font-weight: 900;
+    margin-right: 10px;
+    letter-spacing: -4px;
+}
+
+.timeline--content p::before, .project-box p::before {
+    content: "";
+    margin: 0;
 }
 
 a {
