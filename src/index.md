@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: home.njk
 title: Kang Xuan
 ---
 

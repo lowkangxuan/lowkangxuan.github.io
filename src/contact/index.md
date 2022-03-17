@@ -1,4 +1,4 @@
 ---
-layout: base.njk
+layout: contact.njk
 title: Contact
 ---
