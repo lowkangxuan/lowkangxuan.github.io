@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "env NODE_ENV=production npx eleventy --pathprefix 'test'"
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'lowkangxuan.github.io'"
   },
   "keywords": [],
   "author": "",
