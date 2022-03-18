@@ -52,6 +52,7 @@ a {
 Headers stuff
 */
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #000;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     padding-top: 1.5em;
@@ -122,7 +123,7 @@ Timeline styling
     border-radius: 20px;
     margin: 0;
     padding: 0 1em;
-    line-height: 2;
+    line-height: 24px;
 }
 
 /*
@@ -130,12 +131,18 @@ Projects Page Styling
 */
 .project-box {
     position: relative;
+    color: rgb(126, 126, 126);
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
+    transition: 0.15s transform ease-in-out;
+}
+
+.project-box:hover {
+    transform: scale(0.95);
 }
 
 .project-box p {
@@ -165,6 +172,46 @@ p.project-description {
     bottom: 0;
 }
 
+/*
+Tag Styling
+*/
+.tag {
+    font-size: 13px;
+    border-radius: 15px;
+    padding: 2px 10px;
+    margin-left: 5px;
+    letter-spacing: 0.5px;
+}
+
+.tag::before {
+    content: "#";
+    margin-right: 1px;
+}
+
+.tag-IP {
+    color: var(--color-tag-ip-text);
+    background-color: var(--color-tag-ip-bg);
+}
+
+.tag-3D {
+    color: var(--color-tag-3d-text);
+    background-color: var(--color-tag-3d-bg);
+}
+
+.tag-programming {
+    color: var(--color-tag-programming-text);
+    background-color: var(--color-tag-programming-bg);
+}
+
+.tag-web {
+    color: var(--color-tag-web-text);
+    background-color: var(--color-tag-web-bg);
+}
+
+.tag-tools {
+    color: var(--color-tag-tools-text);
+    background-color: var(--color-tag-tools-bg);
+}
 
 /*
 Self-defined font-family for ease of use
@@ -225,4 +272,17 @@ Media Queries
     .main {
         padding: 0 300px;
     }
+}
+
+:root {
+    --color-tag-ip-text:#007504;
+    --color-tag-ip-bg:#85ff89;
+    --color-tag-3d-text:#006e85;
+    --color-tag-3d-bg:#87ffff;
+    --color-tag-programming-text:#6d0075;
+    --color-tag-programming-bg:#f785ff;
+    --color-tag-web-text:#000e75;
+    --color-tag-web-bg:#8593ff;
+    --color-tag-tools-text:#6d0075;
+    --color-tag-tools-bg:#f785ff;
 }
