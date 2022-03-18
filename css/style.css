@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
 
 body {
     background-color: #fcfcfc;
@@ -36,6 +36,11 @@ a {
 }
 
 .navbar a {
+    border: none;
+}
+
+.tag a {
+    color: inherit;
     border: none;
 }
 
@@ -131,7 +136,7 @@ Projects Page Styling
 */
 .project-box {
     position: relative;
-    color: rgb(126, 126, 126);
+    color: var(--grey);
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     background-color: #fff;
@@ -176,16 +181,28 @@ p.project-description {
 Tag Styling
 */
 .tag {
-    font-size: 13px;
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    font-weight: 700;
     border-radius: 15px;
-    padding: 2px 10px;
-    margin-left: 5px;
+    padding: 2px 12px;
+    border: none;
     letter-spacing: 0.5px;
+    transition: 0.15s transform ease-in-out;
 }
 
 .tag::before {
     content: "#";
     margin-right: 1px;
+}
+
+.tag:hover {
+    transform: scale(1.1);
+}
+
+.tag-2020, .tag-2021, .tag-2022 {
+    color: var(--color-tag-year-text);
+    background-color: var(--color-tag-year-bg);
 }
 
 .tag-IP {
@@ -275,6 +292,9 @@ Media Queries
 }
 
 :root {
+    --grey: #7e7e7e;
+    --color-tag-year-text: #754c00;
+    --color-tag-year-bg: #ffd485;
     --color-tag-ip-text:#007504;
     --color-tag-ip-bg:#85ff89;
     --color-tag-3d-text:#006e85;
