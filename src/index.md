@@ -10,7 +10,7 @@ title: Kang Xuan
 <p>Find out what I have accomplished and what I am currently up to.</p>
 
 <div class="position-relative mt-5">
-    <div class="timeline">
+    <div class="timeline p-exclude">
     <div class="timeline--content">
         <p class="fst-italic"><a href="https://twitter.com/who82848582">Let's explore my future together :D</a></p>
         <p class="year">Future</p>

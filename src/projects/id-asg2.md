@@ -5,7 +5,7 @@ description: EzyRecipe, a website where users can search for quick and easy reci
 started: 20/12/2020
 date: 2020-12-20
 tags: 
- - 2020
+ - "2020"
  - projects
  - programming
  - web

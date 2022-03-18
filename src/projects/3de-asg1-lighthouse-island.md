@@ -5,7 +5,7 @@ description: Lighthouse Island environment with modular pieces modeled and textu
 started: 20/10/2021
 date: 2021-10-20
 tags:
- - 2021
+ - "2021"
  - projects
  - 3D
 ---

@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
 
+/* 
+Body Styling
+*/
 body {
     background-color: #fcfcfc;
     font-family: "Roboto", sans-serif;
+}
+
+.fade-in {
+    animation: fade-in .8s cubic-bezier(.165,.84,.44,1) both;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .main {
@@ -10,7 +26,7 @@ body {
 }
 
 /*
-Paragraph designs
+Paragraph Styling
 */
 p {
     letter-spacing: 1px;
@@ -25,14 +41,42 @@ p::before {
     letter-spacing: -3px;
 }
 
-.timeline--content p::before, .project-box p::before {
+.p-exclude p::before {
     content: "";
     margin: 0;
 }
 
 a {
+    color: #000;
     text-decoration: none;
-    border-bottom: 2px dotted;
+}
+
+.main p a {
+    position: relative;
+    border-bottom: 2px dotted #000;
+}
+
+.main p a::before {
+    content: '';
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 5px;
+    z-index: -1;
+    transition: all .15s ease-in-out;
+}
+
+.main p a:hover {
+    color: #fff;
+    border-bottom: none;
+}
+
+.main p a:hover::before {
+    background-color: #000;
+    bottom: 0;
+    height: 100%;
 }
 
 .navbar a {
@@ -54,7 +98,7 @@ a {
 }
 
 /*
-Headers stuff
+Headers Styling
 */
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color: #000;
@@ -71,7 +115,7 @@ h1::before, h2::before, h3::before {
 }
 
 /*
-Timeline styling
+Timeline Styling
 */
 .timeline--content {
     display: block;
@@ -79,8 +123,8 @@ Timeline styling
     margin-left: 30px;
 }
 
-.timeline--content:not(:last-child) {
-    padding-bottom: 35px;
+.timeline--content {
+    padding-bottom: 40px;
 }
 
 .timeline--content p {
@@ -123,8 +167,8 @@ Timeline styling
 
 .year {
     display: inline-block;
-    color: #000 !important;
-    background-color: #87ffff;
+    color: var(--color-tag-year-text) !important;
+    background-color: var(--color-tag-year-bg);
     border-radius: 20px;
     margin: 0;
     padding: 0 1em;
@@ -187,6 +231,7 @@ Tag Styling
     border-radius: 15px;
     padding: 2px 12px;
     border: none;
+    vertical-align: middle;
     letter-spacing: 0.5px;
     transition: 0.15s transform ease-in-out;
 }
@@ -197,7 +242,7 @@ Tag Styling
 }
 
 .tag:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .tag-2020, .tag-2021, .tag-2022 {
@@ -303,6 +348,6 @@ Media Queries
     --color-tag-programming-bg:#f785ff;
     --color-tag-web-text:#000e75;
     --color-tag-web-bg:#8593ff;
-    --color-tag-tools-text:#6d0075;
-    --color-tag-tools-bg:#f785ff;
+    --color-tag-tools-text:#753700;
+    --color-tag-tools-bg:#f7a964;
 }

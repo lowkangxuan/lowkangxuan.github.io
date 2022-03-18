@@ -5,7 +5,7 @@ description: Modeled and Textured a Robot Toy in Maya and Substance Painter
 started: 03/12/2020
 date: 2020-12-03
 tags: 
- - 2020
+ - "2020"
  - projects
  - 3D
 ---
