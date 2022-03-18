@@ -5,6 +5,7 @@ description: Modeled and Textured an Ice Cream Truck in Maya and Substance Paint
 started: 22/10/2020
 date: 2020-10-22
 tags: 
+ - 2020
  - projects
  - 3D
 ---

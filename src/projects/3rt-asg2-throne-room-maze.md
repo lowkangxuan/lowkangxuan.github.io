@@ -5,6 +5,7 @@ description: Throne Room Maze environment modeled and textured in Maya and Subst
 started: 04/05/2021
 date: 2021-05-04
 tags: 
+ - 2021
  - projects
  - 3D
 ---

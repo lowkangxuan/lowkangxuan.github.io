@@ -5,6 +5,7 @@ description: Waterfall Diorama with modular pieces modeled and textured in Maya 
 started: 01/12/2021
 date: 2021-12-01
 tags: 
+ - 2021
  - projects
  - 3D
 ---
