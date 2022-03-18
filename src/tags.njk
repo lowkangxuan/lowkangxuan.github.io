@@ -1,0 +1,21 @@
+---
+layout: project.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+<h3>All {{ tag }} projects</h3>
+
+{% set taglist = collections[ tag ] %}
+<div class="project-list py-4 d-flex flex-column-reverse justify-content-center gap-4">
+{% for project in taglist %}
+    <div class="project-box">
+      <h5>{{project.data.icon}} {{project.data.title}}</h5>
+      <p class="project-description">{{project.data.description}}</p>
+      <span class="m-0 developed-date">{{project.data.started}}</span>
+      <a href="{{project.url}}" class="entry-link"></a>
+    </div>
+{% endfor %}
+</div>

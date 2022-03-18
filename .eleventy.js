@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget("./src/css/");
 
     return {
+        htmlTemplateEngine: "njk",
         dir: {
             input: "src",
             output: "public",
