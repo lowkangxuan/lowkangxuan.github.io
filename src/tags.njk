@@ -6,12 +6,12 @@ pagination:
   alias: tag
 permalink: /tags/{{ tag }}/
 ---
-<h3>All <span class="tag tag-{{tag}}">{{tag}}</span> projects</h3>
+<h3>All <span class="tag tag-{{tag}}">{{tag}}</span> Projects</h3>
 
 {% set taglist = collections[ tag ] %}
-<div class="project-list py-4 d-flex flex-column justify-content-center gap-4">
+<div class="project-list py-4 d-flex flex-column justify-content-center gap-3">
 {% for project in taglist | reverse %}
-    <div class="project-box">
+    <div class="project-box p-exclude">
       <h5>{{project.data.icon}} {{project.data.title}}</h5>
       <p class="project-description mb-3">{{project.data.description}}</p>
       <div class="d-flex gap-1 align-items-center"><span style="font-size: 12px;">Tags: </span>{% for tag in project.data.tags %}{% if tag != "projects" %}<span class="tag tag-{{tag}}">{{ tag }}</span> {% endif %}{% endfor %}</div>
