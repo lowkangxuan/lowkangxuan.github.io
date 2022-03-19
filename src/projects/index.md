@@ -5,6 +5,7 @@ pagination:
     size: 5
     reverse: true
     alias: projects
+permalink: "projects/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
 ### Projects
