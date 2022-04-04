@@ -42,7 +42,7 @@ Check out the list of projects I have developed over the past few years
     {%- endfor %}
 </div>
 
-<div class="d-flex justify-content-between p-exclude" style="margin: 2rem 0 5.5rem 0">
+<div class="d-flex justify-content-between p-exclude" style="margin: 1rem 0 5.5rem 0">
     {%- if pagination.href.previous -%}
         <p><a href="{{pagination.href.previous}}">< Previous Page</a></p>
     {%- else -%}
