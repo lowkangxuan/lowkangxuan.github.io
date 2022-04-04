@@ -6,16 +6,33 @@ pagination:
   alias: tag
 permalink: /tags/{{ tag }}/
 ---
-<h3>All <span class="tag tag-{{tag}}">{{tag}}</span> Projects</h3>
+<h2><span class="tag tag-{{tag}}">{{tag}}</span> Projects</h2>
+{% if tag == 2020 -%}
+  <p>All 2020 projects</p>
+{%- elif tag == 2021 -%}
+  <p>All 2021 projects</p>
+{%- elif tag == 2022 -%}
+  <p>All 2022 projects</p>
+{%- elif tag == "3D" -%}
+  <p>3D projects that involves me using Maya, Substance Painter, and sometimes Unity</p>
+{%- elif tag == "IP" -%}
+  <p>Integrated Projects(IP) I have completed as part of my diploma that covers all aspects of Programming, 3D Modeling, and Web Development</p>
+{%- elif tag == "programming" -%}
+  <p>All programming related projects I have completed, mainly C#</p>
+{%- elif tag == "tools" -%}
+  <p>Tools I have developed in Unity</p>
+{%- elif tag == "web" -%}
+  <p>Web based projects I have completed</p>
+{%- endif %}
 
 {% set taglist = collections[ tag ] %}
 <div class="project-list py-4 d-flex flex-column justify-content-center gap-3">
-{% for project in taglist | reverse %}
-    <div class="project-box p-exclude">
-      <h5>{{project.data.icon}} {{project.data.title}}</h5>
-      <p class="project-description mb-3">{{project.data.description}}</p>
-      <div class="d-flex gap-1 align-items-center"><span style="font-size: 12px;">Tags: </span>{% for tag in project.data.tags %}{% if tag != "projects" %}<span class="tag tag-{{tag}}">{{ tag }}</span> {% endif %}{% endfor %}</div>
-      <a href="{{project.url}}" class="entry-link"></a>
-    </div>
-{% endfor %}
+  {% for project in taglist | reverse -%}
+      <div class="project-box p-exclude">
+        <h5>{{project.data.icon}} {{project.data.title}}</h5>
+        <p class="project-description mb-3">{{project.data.description}}</p>
+        <div class="d-flex gap-1 align-items-center">{% for tag in project.data.tags %}{% if tag != "projects" %}<span class="tag tag-{{tag}}">{{ tag }}</span> {% endif %}{% endfor %}</div>
+        <a href="{{project.url}}" class="entry-link"></a>
+      </div>
+  {%- endfor %}
 </div>

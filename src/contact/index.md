@@ -1,8 +1,9 @@
 ---
 layout: contact.njk
 title: Contact
+icon: 🤙
 ---
-### Contact Me
+## Contact Me
 Feel free to contact me through email or twitter if you have any questions :)
 
 <div class="p-exclude">

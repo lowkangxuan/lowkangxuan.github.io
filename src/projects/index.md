@@ -1,5 +1,7 @@
 ---
+layout: project.njk
 title: Projects
+icon: 📋
 pagination:
     data: collections.projects
     size: 5
@@ -8,7 +10,7 @@ pagination:
 permalink: "projects/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
-### Projects
+## Projects
 Check out the list of projects I have developed over the past few years
 
 <div class="d-flex flex-row flex-wrap gap-1 pt-4">
@@ -22,11 +24,13 @@ Check out the list of projects I have developed over the past few years
     {%- endfor %}
 </div>
 
-<div class="project-list d-flex flex-column justify-content-center gap-2 py-4 pt-3">
+<div class="project-list d-flex flex-column justify-content-center gap-3 py-4 pt-3">
     {% for project in projects -%}
         <div class="project-box p-exclude">
             <h5>{{project.data.icon}} {{project.data.title}}</h5>
-            <p class="project-description mb-3">{{project.data.description}}</p>
+            <div class="my-2">
+                <p class="project-description">{{project.data.description}}</p>
+            </div>
             <div class="d-flex gap-1 align-items-center">
             {% for tag in project.data.tags -%}
                 {% if tag != "projects" -%}

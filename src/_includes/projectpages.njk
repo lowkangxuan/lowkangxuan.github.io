@@ -1,0 +1,21 @@
+---
+layout: project.njk
+---
+<div class="d-flex flex-column align-items-center mb-5 pt-5">
+    <div class="d-flex gap-1 justify-content-between pt-3">
+        {% for tag in tags -%}
+            {% if tag != "projects" -%}
+                <span class="tag tag-{{ tag }}"><a href="/tags/{{ tag }}/">{{ tag }}</a></span>
+            {%- endif %}
+        {%- endfor %}
+    </div>
+
+    <h1 class="project-title text-center pt-4 pb-3">{{title}}</h1>
+
+    <div class="d-flex flex-row justify-content-between align-items-center">
+        {{ page.date.toLocaleString('default', { month: 'long' }) }} {{ page.date.getDate()}}, {{ page.date.getFullYear() }}
+    </div>
+</div>
+{{ content | toc | safe }}
+{{ content | safe }}
+<footer class="project-footer ff-roboto">{{ page.date.toLocaleString('default', { month: 'long' }) }} {{ page.date.getDate()}}, {{ page.date.getFullYear() }}</footer>

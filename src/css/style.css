@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
 
 /* 
 Body Styling
@@ -23,14 +23,31 @@ body {
 
 .main {
     padding: 0;
+    padding-bottom: 50px;
+}
+
+pre[class*=language-] {
+    margin: 1.25em 0;
+}
+
+.mark, mark {
+    padding: 0em 0.6em;
+    background-color: #dbf3f9;
+    border-radius: 20px;
+}
+
+dl, ol, ul {
+    margin-bottom: 12px;
 }
 
 /*
 Paragraph Styling
 */
 p {
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    letter-spacing: 0.2px;
+    line-height: 24px;
 }
 
 p::before {
@@ -52,12 +69,13 @@ a {
     text-decoration: none;
 }
 
-.main p a {
+.main p a, .toc a {
     position: relative;
     border-bottom: 2px dotted #000;
+    white-space: nowrap;
 }
 
-.main p a::before {
+.main p a::before, .toc a::before {
     content: '';
     background-color: transparent;
     position: absolute;
@@ -69,12 +87,12 @@ a {
     transition: all .15s ease-in-out;
 }
 
-.main p a:hover {
+.main p a:hover, .toc a:hover {
     color: #fff;
     border-bottom: none;
 }
 
-.main p a:hover::before {
+.main p a:hover::before, .toc a:hover:before {
     background-color: #000;
     bottom: 0;
     height: 100%;
@@ -105,10 +123,26 @@ Headers Styling
     color: #000;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    padding-top: 1.5em;
+    margin: 0;
+    padding-bottom: 15px;
 }
 
-h1::before, h2::before, h3::before {
+h1 {
+    font-size: 2em;
+    padding-top: 60px;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding-top: 40px;
+}
+
+h3 {
+    font-size: 1.25em;
+    padding-top: 30px;
+}
+
+h1::before, h2::before {
     content: "#";
     color: #d7d7d7;
     font-weight: 900;
@@ -223,10 +257,30 @@ p.project-description {
 }
 
 /*
+Individual Project Page Styling
+*/
+h1.project-title {
+    max-width: 500px;
+}
+
+h1.project-title::before {
+    content: "";
+    margin: 0;
+}
+
+.project-footer {
+    font-weight: bold;
+    font-size: 14px;
+    border-top: 2px dashed #000;
+    margin-top: 50px;
+    padding-top: 5px;
+}
+
+/*
 Tag Styling
 */
 .tag {
-    font-family: "Space Mono", monospace;
+    font-family: "roboto mono", monospace;
     font-size: 14px;
     font-weight: 700;
     border-radius: 15px;
@@ -279,12 +333,12 @@ Tag Styling
 /*
 Self-defined font-family for ease of use
 */
-.ff-spacemono {
-    font-family: "Space Mono", monospace;
+.ff-firacode {
+    font-family: "Fira Code", monospace;
 }
 
-.ff-spacemono-b {
-    font-family: "Space Mono", monospace;
+.ff-firacode-b {
+    font-family: "Fira Code", monospace;
     font-weight: 700;
 }
 
@@ -311,29 +365,36 @@ Self-defined font-family for ease of use
 Media Queries
 */
 @media (min-width: 576px) {
+    .main {
+        padding-bottom: 50px;
+    }
 }
 
 @media (min-width: 768px) {
     .main {
         padding: 0 50px;
+        padding-bottom: 50px;
     }
 }
 
 @media (min-width: 992px) {
     .main {
         padding: 0 100px;
+        padding-bottom: 50px;
     }
 }
 
 @media (min-width: 1200px) {
     .main {
         padding: 0 200px;
+        padding-bottom: 50px;
     }
 }
 
 @media (min-width: 1400px) {
     .main {
         padding: 0 300px;
+        padding-bottom: 50px;
     }
 }
 
