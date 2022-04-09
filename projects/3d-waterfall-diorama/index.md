@@ -18,8 +18,7 @@ The overview of each individual component of the project.
 
 ### Trees and Mushrooms
 As I was looking for a <mark>Forest</mark> theme for this diorama, multiple low-poly trees and mushrooms were modeled and not individually textured. Instead, a <mark>simple trimsheet</mark> was used to texture the models based on their UV placement to the trimsheet itself.
-
-![Trimsheet Screenshot](/3de-asg2-waterfall-diorama/Trimsheet.png)
+![Trimsheet Screenshot](./img/Trimsheet.png)
 
 ### Swaying grass
 
