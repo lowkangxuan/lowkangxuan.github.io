@@ -18,7 +18,11 @@ The overview of each individual component of the project.
 
 ### Trees and Mushrooms
 As I was looking for a <mark>Forest</mark> theme for this diorama, multiple low-poly trees and mushrooms were modeled and not individually textured. Instead, a <mark>simple trimsheet</mark> was used to texture the models based on their UV placement to the trimsheet itself.
-![Trimsheet Screenshot](./img/Trimsheet.png)
+
+<figure align = "center">
+    <img src="./Trimsheet.png" alt="Model UV Screenshot" style="width:100%">
+    <figcaption align = "center"><b>UV placement for all models</b></figcaption>
+</figure>
 
 ### Swaying grass
 
