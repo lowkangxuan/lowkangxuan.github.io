@@ -49,21 +49,44 @@
     </div>
 </div>
 <div class="toc" >
-        <ul><li><a href="#introduction">Introduction</a></li><li><a href="#project-overview">Project Overview</a><ul><li><a href="#trees-and-mushrooms">Trees and Mushrooms</a></li><li><a href="#swaying-grass">Swaying grass</a></li></ul></li><li><a href="#additional-resources">Additional Resources</a></li></ul>
+        <ul><li><a href="#introduction">Introduction</a></li><li><a href="#project-overview">Project Overview</a><ul><li><a href="#trees-and-mushrooms">Trees and Mushrooms</a></li><li><a href="#swaying-grass">Swaying grass</a></li><li><a href="#waterfall">Waterfall</a></li><li><a href="#interactive-water">Interactive Water</a></li></ul></li><li><a href="#additional-resources">Additional Resources</a></li></ul>
       </div>
 <h2 id="introduction" tabindex="-1">Introduction</h2>
 <p>This Waterfall Diorama was created as part of my Year 2.2 module assignment, 3D Environment, where I was tasked to create this diorama using low-poly models with a waterfall present within the diorama.</p>
 <h2 id="project-overview" tabindex="-1">Project Overview</h2>
-<p>The overview of each individual component of the project.</p>
+<p>I will be going through the important aspects of the project as thoroughly as possible.</p>
 <h3 id="trees-and-mushrooms" tabindex="-1">Trees and Mushrooms</h3>
-<p>As I was looking for a <mark>Forest</mark> theme for this diorama, multiple low-poly trees and mushrooms were modeled and not individually textured. Instead, a <mark>simple trimsheet</mark> was used to texture the models based on their UV placement to the trimsheet itself.</p>
+<p>As I was looking for a <mark>Forest</mark> theme for this diorama, multiple low-poly trees and mushrooms were modeled and not individually textured. Instead, a <mark>simple trimsheet</mark> with flat colours only was used to texture the models based on their UV placement to the trimsheet itself.</p>
 <figure align = "center">
     <img src="./Trimsheet.png" alt="Model UV Screenshot" style="width:100%">
     <figcaption align = "center"><b>UV placement for all models</b></figcaption>
 </figure>
 <h3 id="swaying-grass" tabindex="-1">Swaying grass</h3>
+<p>To make the environment look abit more interesting, I placed multiple grass across the diorama that has a shader that displaces each vertices based on the gradient noise value. The shader itself was made in Unity's shader graph with the help of Brackeys tutorial (link in #Additional Resources).</p>
+<figure align = "center">
+    <img src="./GrassShader.png" alt="Grass Sway Shader Graph Screenshot" style="width:100%">
+    <figcaption align = "center"><b>Grass Sway Shader Graph</b></figcaption>
+</figure>
+<h3 id="waterfall" tabindex="-1">Waterfall</h3>
+<p>The waterfall itself has 2 parts, the shader and the mesh.</p>
+<p>Creating the shader itself is pretty straight forward. I simply displaced each vertices based on a gradient noise and created a normal map based on a separate gradient noise using the <code>Normal From Height</code> node.</p>
+<p>I used the R channel of the Vertex Color to ensure that the starting few vertices of the waterfall mesh was not affected by the vertex displacement, ensuring that the waterfall itself is immersive.</p>
+<figure align = "center">
+    <img src="./WaterfallShader.png" alt="Waterfall Shader Graph Screenshot" style="width:100%">
+    <figcaption align = "center"><b>Waterfall Shader Graph</b></figcaption>
+</figure>
+<p>The mesh was created by extruding a cube and adding multiple subdivisions so that the resulting vertex displacement from the shader does not feel &quot;choppy&quot; in a way. I had to unwrap the UV in such a way that the back portion of the mesh mirrors the front portion since the gradient noise used for the vertex displacement is procedural and not seamless. By mirroring the UVs, I can &quot;fake&quot; the seamless displacement.</p>
+<figure align = "center">
+    <img src="./WaterfallUV.png" alt="Waterfall UV Layout Screenshot" style="width:100%">
+    <figcaption align = "center"><b>Waterfall mesh UV layout</b></figcaption>
+</figure>
+<h3 id="interactive-water" tabindex="-1">Interactive Water</h3>
+<p>The final aspect of the diorama is to add water interaction the moment the player enters the water. By referencing a tutorial created by <a href="https://www.patreon.com/minionsart">MinionsArt</a>, I was able to create the interactive water by writing a <mark>script</mark> and using <mark>Unity's Particle System</mark>.<br>
+<a href="./Interactive%20Water%20Documentation.docx">Download this documentation</a> instead to setup the Interactive Water.</p>
+<p><img src="./Interactive%20Water%20Example.mp4" alt="Alternate Text"></p>
 <h2 id="additional-resources" tabindex="-1">Additional Resources</h2>
 <p><a href="https://www.youtube.com/watch?v=L_Bzcw9tqTc">Brackeys Grass Shader</a></p>
+<p><a href="https://www.patreon.com/posts/24192529">Interactive Water Tutorial</a></p>
 
 <footer class="project-footer ff-roboto">January 19, 2022</footer>
         <footer class="d-flex justify-content-center gap-4">
