@@ -18,11 +18,6 @@ Find out what I have accomplished and what I am currently up to.
         <p class="year">Future</p>
     </div>
     <div class="timeline--content">
-        <p class="fw-bold">📝 Capstone Project</p>
-        <p class="">TrueWorld Studios | Developer</p>
-        <p class="year">2022</p>
-    </div>
-    <div class="timeline--content">
         <p class="fw-bold">📆 Internship</p>
         <p class="">HelloHolo | Mixed Reality Developer</p>
         <p class="year">2022</p>
