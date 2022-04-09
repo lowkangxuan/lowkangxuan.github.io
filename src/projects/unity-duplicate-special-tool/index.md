@@ -239,7 +239,7 @@ private void DuplicateObject()
 ```
 
 ## Todo
-With the tool itself still being early in development, there are list of potential features that I may implement into the tool itself in the future, who knows
+With the tool itself still being early in development, there are list of potential features that I may implement into the tool itself in the future.
 
 - Support for multiple object duplication
 - Display preview mesh for selected object that has the `MeshRenderer` component in the child object(s) instead

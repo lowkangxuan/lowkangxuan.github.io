@@ -55,8 +55,6 @@ The mesh was created by extruding a cube and adding multiple subdivisions so tha
 The final aspect of the diorama is to add water interaction the moment the player enters the water. By referencing a tutorial created by [MinionsArt](https://www.patreon.com/minionsart), I was able to create the interactive water by writing a <mark>script</mark> and using <mark>Unity's Particle System</mark>.
 [Download this documentation](./Interactive%20Water%20Documentation.docx) instead to setup the Interactive Water.
 
-![Alternate Text](./Interactive%20Water%20Example.mp4)
-
 ## Additional Resources
 [Brackeys Grass Shader](https://www.youtube.com/watch?v=L_Bzcw9tqTc)
 
