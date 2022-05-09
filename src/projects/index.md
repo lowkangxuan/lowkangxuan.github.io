@@ -11,7 +11,7 @@ permalink: "projects/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNu
 ---
 
 ## Projects
-Check out the list of projects I have developed over the past few years
+Check out the list of projects I have developed over the past few years which includes projects I have done for school and personal use
 
 <div class="d-flex flex-row flex-wrap gap-1 pt-4">
     {% for tag in collections.tagList -%}

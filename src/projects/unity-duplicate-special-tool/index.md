@@ -10,6 +10,7 @@ tags:
  - projects
  - programming
  - tools
+ - breakdown
 ---
 
 ## Introduction
@@ -27,8 +28,8 @@ For example, a selected object with a translation of (2, 0, 0) and an input of `
 - Support for all 3 Transforms: `Position`, `Rotation`, `Scale`
 - Displays holographic mesh if the selected gameObject has a mesh
 
-## Development Process
-The starting development process of this tool took me about over a week to complete, with additional features taking about 2 more weeks or so. 
+## Breakdown
+The starting development process of this tool took me about over a week to complete, with additional features taking about 2 more weeks or so. I will be going through most of the code for the tool itself below with explainations as to how certain of these codes work.
 
 ### Initialization
 I first included the namespace `UnityEditor` and inherited my script from `EditorWindow` instead of the default `MonoBehaviour`.

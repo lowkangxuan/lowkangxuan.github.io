@@ -3,7 +3,7 @@ layout: home.njk
 title: Kang Xuan
 icon: 👋
 ---
-## Hello!👋
+## Hello!
 I am Kang Xuan, a student who enjoys gaming and passionate in Game Development.
 
 Currently residing in Singapore studying for a Diploma in Immersive Media at Ngee Ann Polytechnic.
