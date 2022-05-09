@@ -47,7 +47,7 @@ Paragraph Styling
 p {
     font-size: 16px;
     margin-bottom: 12px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.02em;
     line-height: 24px;
 }
 
@@ -125,7 +125,7 @@ Headers Styling
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     margin: 0;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 h1 {
@@ -141,6 +141,11 @@ h2 {
 h3 {
     font-size: 1.25em;
     padding-top: 30px;
+}
+
+h4 {
+    font-size: 1em;
+    padding-top: 15px;
 }
 
 h1::before, h2::before {
@@ -218,7 +223,11 @@ TOC Styling
     line-height: 1.5em;
     margin: 5px 0 15px;
     padding: 0;
-  }
+}
+
+.toc ul ul {
+    margin: 5px 0;
+}
   
 .toc li {
 list-style: none;
@@ -236,6 +245,13 @@ padding: 0 0 0 20px;
     border: 1px solid #000;
     border-width: 2px 2px 0 0;
     transform: rotate(45deg);
+}
+
+/*
+Carousel Styling
+*/
+.carousel.slide {
+    margin-bottom: 12px;
 }
 
 /*
@@ -310,7 +326,7 @@ Tag Styling
 .tag {
     font-family: "roboto mono", monospace;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500 !important;
     border-radius: 15px;
     padding: 3px 13px;
     border: none;
@@ -356,6 +372,11 @@ Tag Styling
 .tag-tools {
     color: var(--color-tag-tools-text);
     background-color: var(--color-tag-tools-bg);
+}
+
+.tag-breakdown {
+    color: var(--color-tag-breakdown-text);
+    background-color: var(--color-tag-breakdown-bg);
 }
 
 /*
@@ -440,4 +461,6 @@ Media Queries
     --color-tag-web-bg:#8593ff;
     --color-tag-tools-text:#753700;
     --color-tag-tools-bg:#f7a964;
+    --color-tag-breakdown-text:#8d442e;
+    --color-tag-breakdown-bg:#ff9e80;
 }
