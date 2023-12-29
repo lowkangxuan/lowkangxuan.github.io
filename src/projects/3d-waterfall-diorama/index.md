@@ -1,7 +1,7 @@
 ---
 icon: 📦
 title: 3D Waterfall Diorama
-description: Waterfall Diorama with modular pieces modeled and textured in Maya and Substance Painter. Environment and Shaders built in Unity
+description: Waterfall Diorama built in Unity
 started: 01/12/2021
 date: 2022-01-19
 tags: 
@@ -12,7 +12,7 @@ tags:
 ---
 
 ## Introduction
-This Waterfall Diorama was created as part of my Year 2.2 module assignment, 3D Environment(3DE), where I was tasked to create this diorama using modular low-poly models with a waterfall present within the diorama.
+This Waterfall Diorama was created as part of my Year 2.2 module assignment, 3D Environment(3DE), where I was tasked to create this diorama using modular low-poly models with a waterfall present within the diorama. The modular pieces were modeled and textured in Maya and Substance Painter.
 
 ## Snapshots
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -20,6 +20,7 @@ This Waterfall Diorama was created as part of my Year 2.2 module assignment, 3D 
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -32,6 +33,12 @@ This Waterfall Diorama was created as part of my Year 2.2 module assignment, 3D 
             <img src="./ForestWaterfall.png" class="d-block w-100" alt="Forest & Waterfall">
             <div class="carousel-caption d-none d-md-block">
                 <span>Top forest and Waterfall</span>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./WaterfallFoam.gif" class="d-block w-100" alt="Waterfall Foam">
+            <div class="carousel-caption d-none d-md-block">
+                <span>Waterfall Foam Effect</span>
             </div>
         </div>
         <div class="carousel-item">

@@ -8,9 +8,11 @@ tags:
  - "2021"
  - projects
  - 3D
+ - breakdown
 ---
 
 ## Introduction
+This Lighthouse Island Environment was created as part of my Year 2.2 module assignment, 3D Environment(3DE), where I was tasked to create this environment using modular models
 
 ## Snapshots
 
