@@ -31,7 +31,7 @@ Check out the list of projects I have developed over the past few years which in
             <div class="my-2">
                 <p class="project-description">{{project.data.description}}</p>
             </div>
-            <div class="d-flex gap-1 align-items-center">
+            <div class="d-flex flex-wrap gap-1 align-items-center">
             {% for tag in project.data.tags -%}
                 {% if tag != "projects" -%}
                     <span class="tag tag-{{tag}}">{{ tag }}</span>

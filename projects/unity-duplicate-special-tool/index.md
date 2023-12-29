@@ -1,15 +1,14 @@
 ---
 layout: projectpages.njk
 icon: 🔧
-title: Developing a Duplicate Special Tool in Unity
+title: Developing a Duplicate Special Tool
 description: Unity Tool inspired by Maya Duplicate Special Tool
-started: 29/12/2022
+started: 29/12/2021
 date: 2021-12-29
 tags:
  - "2021"
  - projects
  - programming
- - tools
  - breakdown
 ---
 
@@ -108,7 +107,7 @@ private void OnDisable()
 }
 ```
 
-### Calculating Position
+### Calculating Object Position
 The function `CalculatePosition()` was created to help calculate the position that I need for each duplicated gameObject.
 
 The overload function I created is for the hologram mesh that will be drawn on the Scene View based on the input field values. More on that below.
@@ -127,7 +126,7 @@ private Vector3 CalculatePosition(float xPos, float yPos, float zPos, int index)
 }
 ```
 
-### Scene View GUI
+### Displaying mesh in the Scene
 I created a `DuringSceneGUI()` function which takes in a `SceneView` parameter in order for me to subscribe this function to the `SceneView.duringSceneGui` event.
 
 I then used the `CalculatePosition()` overload function to determine the position of the preview mesh should be displayed at. I also created 2 variables, `finalRotation` and `finalScale`, and used these 2 variables together with the calculated position to make a standard 4x4 transformation matrix. Finally, the preview mesh is drawn with the `Graphics.DrawMeshNow()` function.
