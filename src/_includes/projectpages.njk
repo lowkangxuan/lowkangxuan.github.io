@@ -6,7 +6,7 @@ layout: project.njk
     <div class="d-flex flex-wrap gap-1 pt-0">
         {% for tag in tags -%}
             {% if tag != "projects" -%}
-                <span class="tag tag-{{ tag }}"><a href="/tags/{{ tag }}/">{{ tag }}</a></span>
+                <a href="/tags/{{ tag }}/" class="tag tag-{{ tag }}"><span>{{ tag }}</span></a>
             {%- endif %}
         {%- endfor %}
     </div>

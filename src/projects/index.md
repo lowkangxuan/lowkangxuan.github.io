@@ -11,15 +11,15 @@ permalink: "projects/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNu
 ---
 
 ## Projects
-Check out the list of projects I have developed over the past few years which includes projects I have done for school and personal use
+All the fun little projects I have done over the past few years
 
 <div class="d-flex flex-row flex-wrap gap-1 pt-4">
     {% for tag in collections.tagList -%}
         {% if tag == "2022" -%}
-            <span class="tag tag-{{ tag }}"><a href="/tags/{{ tag }}/">{{ tag }}</a></span>
+            <a href="/tags/{{ tag }}/" class="tag tag-{{ tag }}"><span>{{ tag }}</span></a>
             <div style="flex-basis: 100%;"></div>
         {%- else -%}
-            <span class="tag tag-{{ tag }}"><a href="/tags/{{ tag }}/">{{ tag }}</a></span>
+            <a href="/tags/{{ tag }}/" class="tag tag-{{ tag }}"><span>{{ tag }}</span></a>
         {%- endif %}
     {%- endfor %}
 </div>
@@ -27,16 +27,19 @@ Check out the list of projects I have developed over the past few years which in
 <div class="project-list d-flex flex-column justify-content-center gap-3 py-4 pt-3">
     {% for project in projects -%}
         <div class="project-box p-exclude">
-            <h5>{{project.data.icon}} {{project.data.title}}</h5>
-            <div class="my-2">
-                <p class="project-description">{{project.data.description}}</p>
+            <div class="project-box-thumbnail">
+                <img src="{{project.url}}/{{project.data.thumbnail}}"></img>
             </div>
-            <div class="d-flex flex-wrap gap-1 align-items-center">
-            {% for tag in project.data.tags -%}
-                {% if tag != "projects" -%}
-                    <span class="tag tag-{{tag}}">{{ tag }}</span>
-                {%- endif %}
-            {%- endfor %}</div>
+            <div class="project-box-info">
+                <h5>{{project.data.icon}} {{project.data.title}}</h5>
+                <p class="project-description mt-1 mb-4 ff-firacode">{{project.data.description}}</p>
+                <div class="d-flex flex-wrap gap-1 align-items-center">
+                {% for tag in project.data.tags -%}
+                    {% if tag != "projects" -%}
+                        <div class="tag tag-{{tag}}"><span>{{ tag }}</span></div>
+                    {%- endif %}
+                {%- endfor %}</div>
+                </div>
             <a href="{{project.url}}" class="entry-link"></a>
         </div>
     {%- endfor %}

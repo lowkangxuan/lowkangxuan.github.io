@@ -14,17 +14,17 @@ Find out what I have accomplished and what I am currently up to.
 <div class="position-relative mt-5">
     <div class="timeline p-exclude">
     <div class="timeline--content">
-        <p class=""><a href="https://twitter.com/who82848582">Let's explore my future together :D</a></p>
+        <p class=""><a href="https://twitter.com/k4ngg_">Let's explore my future together :D</a></p>
         <p class="year">Future</p>
     </div>
     <div class="timeline--content">
-        <p class="fw-bold">📆 Student Internship</p>
+        <p class="fw-bold">📆 6-month Internship</p>
         <p class="">TrueWorld Studios | Developer</p>
-        <p class="year">2022</p>
+        <p class="year">2022 - 2023</p>
     </div>
     <div class="timeline--content">
-        <p class="fw-bold">📝 Final Year Project</p>
-        <p class="">TrueWorld Studios | Developer</p>
+        <p class="fw-bold">📝 Student Final Year Project</p>
+        <p class=""><a href="https://www.linkedin.com/company/trueworld-studios/">TrueWorld Studios</a> | Developer</p>
         <p class="year">2022</p>
     </div>
     <div class="timeline--content">
