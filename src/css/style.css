@@ -163,14 +163,20 @@ h1::before, h2::before {
 /*
 Timeline Styling
 */
-.timeline--content {
-    display: block;
+.timeline {
+    display: inline-block;
     position: relative;
-    margin-left: 30px;
 }
 
 .timeline--content {
-    padding-bottom: 40px;
+    display: flex;
+    position: relative;
+    margin-left: 40px;
+    padding-bottom: 50px;
+}
+
+.timeline--content:first-child {
+    padding-bottom: 65px;
 }
 
 .timeline--content p {
@@ -187,28 +193,52 @@ Timeline Styling
     content: " ";
     position: absolute;
     border-left: 3px solid #000;
-    left: -30px;
+    left: -41.5px;
     height: 100%;
 }
 
 .timeline--content:first-child::before {
-    content: " ";
-    position: absolute;
-    border-left: 3px dotted #000;
-    left: -30px;
-    height: 100%;
+    border-left-style: dashed;
 }
-
 
 .timeline--content::after {
     content: " ";
     position: absolute;
     background-color: #000;
-    top: 0;
-    left: -36.5px;
     height: 16px;
     width: 16px;
+    border: 3px solid #000;
     border-radius: 100px;
+    top: 0;
+    left: -48px;
+}
+
+.timeline--content:first-child::after {
+    background-color: var(--main);
+}
+
+.timeline--box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: fit-content;
+    max-width: 450px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 8px 16px;
+    top: -20px;
+    box-shadow: #000 0 3px;
+}
+
+.timeline--box::before {
+    content: '';
+    position: absolute;
+    border-color: transparent #000;
+    border-style: solid;
+    border-width: 10px;
+    border-left-width: 0px;
+    top: 14px;
+    left: -13px;
 }
 
 .year {
@@ -293,7 +323,7 @@ Projects Page Styling
 }
 
 .project-box-info {
-    padding: 15px 12px;
+    padding: 16px;
 }
 
 p.project-description {
@@ -459,6 +489,34 @@ Media Queries
     .main {
         padding: 0 100px;
         padding-bottom: 50px;
+    }
+
+    .timeline {
+        left: 50%;
+    }
+
+    .timeline--content.left {
+        justify-content: right;
+        right: 100%;
+        margin-left: 0;
+        margin-right: 40px;
+    }
+
+    .timeline--content.left:not(:last-child)::before {
+        left: initial;
+        right: -41.5px;
+    }
+
+    .timeline--content.left::after {
+        left: initial;
+        right: -48px;
+    }
+
+    .timeline--content.left .timeline--box::before {
+        border-color: transparent #000;
+        border-width: 10px;
+        border-right-width: 0px;
+        left: calc(100% + 3px);
     }
 }
 

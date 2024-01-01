@@ -1,0 +1,28 @@
+{
+    "infos": [
+        {
+            "title": "📆 6-month Internship",
+            "position": "TrueWorld Studios | Developer",
+            "description": "Worked on the company's inaugural IP, UNYIELDER.",
+            "year": "2022 - 2023"
+        },
+        {
+            "title": "📝 Student Final Year Project",
+            "position": "TrueWorld Studios | Developer",
+            "description": "Worked on the company's inaugural IP, UNYIELDER.",
+            "year": "2022"
+        },
+        {
+            "title": "📆 1-month Internship",
+            "position": "HelloHolo | Mixed Reality Developer",
+            "description": "Helped out with development on a Mixed-Reality client project",
+            "year": "2022"
+        },
+        {
+            "title": "🧑‍🎓 Ngee Ann Polytechnic",
+            "position": "Diploma | Immersive Media",
+            "description": "Studied in a local polytechnic for a diploma in Immersive Media",
+            "year": "2020 - 2023"
+        }
+    ]
+}

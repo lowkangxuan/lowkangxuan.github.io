@@ -11,36 +11,17 @@ Currently residing in Singapore studying for a Diploma in Immersive Media at Nge
 ## Over the Years
 Find out what I have accomplished and what I am currently up to.
 
-<div class="position-relative mt-5">
-    <div class="timeline p-exclude">
+<div class="timeline p-exclude mt-5">
     <div class="timeline--content">
-        <p class=""><a href="https://twitter.com/k4ngg_">Let's explore my future together :D</a></p>
-        <p class="year">Future</p>
+        <p><a href="https://twitter.com/k4ngg_">Let's explore my future together :D</a></p>
     </div>
-    <div class="timeline--content">
-        <p class="fw-bold">📆 6-month Internship</p>
-        <p class="">TrueWorld Studios | Developer</p>
-        <p class="year">2022 - 2023</p>
+    {% for info in timeline.infos -%}
+    <div class="timeline--content  {%- if (loop.index % 2) != 0 %} left {%- endif %}">
+        <div class="timeline--box">
+            <span class="fw-bold">{{info.title}}</span>
+            <span>{{info.position}}</span>
+            <span style="font-size: small;">{{info.year}}</span>
+        </div>
     </div>
-    <div class="timeline--content">
-        <p class="fw-bold">📝 Student Final Year Project</p>
-        <p class=""><a href="https://www.linkedin.com/company/trueworld-studios/">TrueWorld Studios</a> | Developer</p>
-        <p class="year">2022</p>
-    </div>
-    <div class="timeline--content">
-        <p class="fw-bold">📆 1-month Internship</p>
-        <p class="">HelloHolo | Mixed Reality Developer</p>
-        <p class="year">2022</p>
-    </div>
-    <div class="timeline--content">
-        <p class="fw-bold">📜 Unity Certification</p>
-        <p class="">Certified Associate | Game Developer</p>
-        <p class="year">2022 - 2025</p>
-    </div>
-    <div class="timeline--content">
-        <p class="fw-bold">🧑‍🎓 Ngee Ann Polytechnic</p>
-        <p class=""><a href="https://www.np.edu.sg/ict/Pages/im.aspx">Diploma | Immersive Media</a></p>
-        <p class="year">2020 - 2023</p>
-    </div>
-    </div>
+    {%- endfor %}
 </div>

@@ -47,17 +47,19 @@ module.exports = function(eleventyConfig) {
     
     // eleventyConfig.setLibrary("md", md);
     
-    eleventyConfig.addPassthroughCopy("./src/css/");
-    eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addPassthroughCopy("./src/css/");
+  eleventyConfig.addWatchTarget("./src/css/");
 
-    eleventyConfig.addPassthroughCopy("./src/projects/");
-    eleventyConfig.addWatchTarget("./src/projects/");
-    return {
-      htmlTemplateEngine: "njk",
-      markdownTemplateEngine: "njk",
-      dir: {
-        input: "src",
-        output: "public",
-      },
-    };
+  eleventyConfig.addPassthroughCopy("./src/projects/");
+  eleventyConfig.addWatchTarget("./src/projects/");
+
+  return {
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+    dir: {
+      data: "_data",
+      input: "src",
+      output: "public",
+    },
   };
+};
