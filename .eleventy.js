@@ -35,14 +35,8 @@ module.exports = function(eleventyConfig) {
     return Array.from(tagsSet).sort();
   });
 
-  eleventyConfig.addFilter("postDate", date => {
-    if (date && typeof date.getMonth === "function") {
-      return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_HUGE);
-    }
-    if (typeof date === "object") {
-      return DateTime.fromObject(date).toLocaleString(DateTime.DATE_HUGE);
-    }
-    return DateTime.fromISO(date).toLocaleString(DateTime.DATE_HUGE);
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
   
   // var MarkdownIt = require("markdown-it");
