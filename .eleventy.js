@@ -37,12 +37,12 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("postDate", date => {
     if (date && typeof date.getMonth === "function") {
-      return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_HUGE)
+      return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_HUGE);
     }
     if (typeof date === "object") {
-      return DateTime.fromObject(date).toLocaleString(DateTime.DATE_HUGE)
+      return DateTime.fromObject(date).toLocaleString(DateTime.DATE_HUGE);
     }
-    return DateTime.fromISO(date).toLocaleString(DateTime.DATE_HUGE)
+    return DateTime.fromISO(date).toLocaleString(DateTime.DATE_HUGE);
   });
   
   // var MarkdownIt = require("markdown-it");
