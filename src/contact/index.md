@@ -4,9 +4,10 @@ title: Contact
 icon: 🤙
 ---
 ## Contact Me
-Feel free to contact me through email or twitter if you have any questions :)
+Have any questions? Feel free to contact me through any of these social platforms :)
 
 <div class="p-exclude">
-    <p><a href="mailto: lowkangxuan@gmail.com">lowkangxuan@gmail.com</a></p>
-    <p><a href="https://twitter.com/k4ngg_">twitter.com/k4ngg_</a></p>
+    {%- for social in socials.datas -%}
+        <p><a href="{{social.url}}">{{social.text}}</a></p>
+    {%- endfor -%}
 </div>

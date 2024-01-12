@@ -2,38 +2,4 @@
 layout: base.njk
 ---
 
-<nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top px-4 fw-bold">
-    <div class="container">
-        <a href="/" class="navbar-brand">Kang Xuan</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a href="/" class="nav-link px-3" aria-label="Home">Home</a>
-            <a href="/projects" class="nav-link px-3 active" aria-label="Projects">Projects</a>
-            <a href="/contact" class="nav-link px-3" aria-label="Contact Me">Contact</a>
-        </div>
-        </div>
-    </div>
-</nav>
-
-<div class="container px-4">
-    <div class="main ff-firacode">
-        {{content|safe}}
-        <footer class="d-flex justify-content-center gap-4">
-            <a href="mailto: lowkangxuan@gmail.com" target="_blank">
-                <i class="fa-solid fa-envelope fa-lg"></i>
-            </a>
-            <a href="https://twitter.com/k4ngg_" target="_blank">
-                <i class="fa-brands fa-twitter fa-lg"></i>
-            </a>
-            <a href="https://github.com/lowkangxuan" target="_blank">
-                <i class="fa-brands fa-github fa-lg"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/low-kang-xuan-0305061a9/" target="_blank">
-                <i class="fa-brands fa-linkedin fa-lg"></i>
-            </a>
-        </footer>
-    </div>
-</div>
+{{content|safe}}

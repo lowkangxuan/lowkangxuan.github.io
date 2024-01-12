@@ -4,6 +4,7 @@ const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it")
 const markdownItAnchor = require("markdown-it-anchor")
 const pluginTOC = require("eleventy-plugin-toc")
+const readingTime = require('eleventy-plugin-reading-time')
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary(
@@ -20,21 +21,28 @@ module.exports = function(eleventyConfig) {
     ul: true,
     tags: ["h2", "h3", "h4"],
     wrapper: "div"
-  })
+  });
+  eleventyConfig.addPlugin(readingTime);
   
   eleventyConfig.addCollection("tagList", collection => {
     const tagsSet = new Set();
     collection.getAll().forEach(item => {
       if (!item.data.tags) return;
       item.data.tags
-      .filter(tag => !["post", "all", "projects"].includes(tag))
+      .filter(tag => !["post", "all", "blogs", "projects"].includes(tag))
       .forEach(tag => tagsSet.add(tag));
     });
     return Array.from(tagsSet).sort();
   });
-  
-  eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+
+  eleventyConfig.addFilter("postDate", date => {
+    if (date && typeof date.getMonth === "function") {
+      return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_HUGE)
+    }
+    if (typeof date === "object") {
+      return DateTime.fromObject(date).toLocaleString(DateTime.DATE_HUGE)
+    }
+    return DateTime.fromISO(date).toLocaleString(DateTime.DATE_HUGE)
   });
   
   // var MarkdownIt = require("markdown-it");
@@ -49,6 +57,9 @@ module.exports = function(eleventyConfig) {
     
   eleventyConfig.addPassthroughCopy("./src/css/");
   eleventyConfig.addWatchTarget("./src/css/");
+
+  eleventyConfig.addPassthroughCopy("./src/blogs/");
+  eleventyConfig.addWatchTarget("./src/blogs/");
 
   eleventyConfig.addPassthroughCopy("./src/projects/");
   eleventyConfig.addWatchTarget("./src/projects/");

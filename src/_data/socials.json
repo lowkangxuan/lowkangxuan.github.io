@@ -1,0 +1,28 @@
+{
+    "datas": [
+        {
+            "url": "mailto: lowkangxuan@gmail.com",
+            "icon": "fa-solid fa-envelope",
+            "text": "lowkangxuan@gmail.com",
+            "platform": "Email"
+        },
+        {
+            "url": "https://twitter.com/k4nggg",
+            "icon": "fa-brands fa-twitter",
+            "text": "twitter.com/k4nggg",
+            "platform": "Twitter"
+        },
+        {
+            "url": "https://github.com/lowkangxuan",
+            "icon": "fa-brands fa-github",
+            "text": "github.com/lowkangxuan",
+            "platform": "GitHub"
+        },
+        {
+            "url": "https://www.linkedin.com/in/low-kang-xuan/",
+            "icon": "fa-brands fa-linkedin",
+            "text": "linkedin.com/in/low-kang-xuan",
+            "platform": "LinkedIn"
+        }
+    ]
+}

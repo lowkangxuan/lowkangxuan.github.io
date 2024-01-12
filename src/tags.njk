@@ -1,5 +1,5 @@
 ---
-layout: project.njk
+layout: blog.njk
 pagination:
   data: collections
   size: 1
@@ -29,22 +29,25 @@ permalink: /tags/{{ tag }}/
 
 {% set taglist = collections[ tag ] %}
 <div class="project-list d-flex flex-column justify-content-center gap-3 py-4 pt-3">
-  {% for project in taglist | reverse -%}
-        <div class="project-box p-exclude">
+  {% for blog in taglist | reverse -%}
+        <article class="project-box p-exclude">
+            {%- if blog.data.thumbnail -%}
             <div class="project-box-thumbnail">
-                <img src="{{project.url}}/{{project.data.thumbnail}}"></img>
+                <img src="{{blog.url}}/{{blog.data.thumbnail}}"></img>
             </div>
+            {%- endif -%}
             <div class="project-box-info">
-                <h5>{{project.data.icon}} {{project.data.title}}</h5>
-                <p class="project-description mt-1 mb-4 ff-firacode">{{project.data.description}}</p>
-                <div class="d-flex flex-wrap gap-1 align-items-center">
-                {% for tag in project.data.tags -%}
-                    {% if tag != "projects" -%}
-                        <div class="tag tag-{{tag}}"><span>{{ tag }}</span></div>
-                    {%- endif %}
-                {%- endfor %}</div>
+                <h5>{{blog.data.icon}} {{blog.data.title}}</h5>
+                <p class="project-description mt-0 mb-3 ff-firacode">{{blog.data.description}}</p>
+                <div class="gap-1 align-items-center project-tags">
+                    {% for tag in blog.data.tags -%}
+                        {% if tag != "blogs" -%}
+                            <div class="tag tag-{{tag}}"><span>{{ tag }}</span></div>
+                        {%- endif %}
+                    {%- endfor %}
                 </div>
-            <a href="{{project.url}}" class="entry-link"></a>
-        </div>
+            </div>
+            <a href="{{blog.url}}" class="entry-link"></a>
+        </article>
   {%- endfor %}
 </div>

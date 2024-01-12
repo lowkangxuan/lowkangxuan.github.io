@@ -1,0 +1,20 @@
+{
+    "datas": [
+        {
+            "url": "/",
+            "name": "Home"
+        },
+        {
+            "url": "/blogs",
+            "name": "Blogs"
+        },
+        {
+            "url": "/projects",
+            "name": "Projects"
+        },
+        {
+            "url": "/contact",
+            "name": "Contact"
+        }
+    ]
+}
