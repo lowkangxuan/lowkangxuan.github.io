@@ -1,10 +1,11 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { DateTime } = require("luxon");
 
-const markdownIt = require("markdown-it")
-const markdownItAnchor = require("markdown-it-anchor")
-const pluginTOC = require("eleventy-plugin-toc")
-const readingTime = require('eleventy-plugin-reading-time')
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+const pluginTOC = require("eleventy-plugin-toc");
+const readingTime = require('eleventy-plugin-reading-time');
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary(
@@ -23,6 +24,7 @@ module.exports = function(eleventyConfig) {
     wrapper: "div"
   });
   eleventyConfig.addPlugin(readingTime);
+  eleventyConfig.addPlugin(UpgradeHelper);
   
   eleventyConfig.addCollection("tagList", collection => {
     const tagsSet = new Set();

@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "env NODE_ENV=production npx eleventy --pathprefix 'lowkangxuan.github.io'"
+    "build": "npx eleventy",
+    "production": "NODE_ENV=production eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-upgrade-help": "^2.0.5",
     "@sindresorhus/slugify": "^2.1.0",
     "cross-spawn": "^7.0.3",
     "eleventy-plugin-reading-time": "^0.0.1",
