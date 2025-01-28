@@ -15,7 +15,7 @@ All the fun little things I have done during my free time.
 
 <div class="project-list d-flex flex-column justify-content-center gap-3 py-4 pt-3">
     {% for project in projects -%}
-        {%- if {{loop.index0}} == 0 -%}
+        {%- if loop.index0 == 0 -%}
         <span>hi</span>
         {%- endif -%}
         <article class="project-box p-exclude">
