@@ -4,12 +4,10 @@ title: Kang Xuan
 icon: 👋
 ---
 ## Hello!
-I am Kang Xuan, a student who enjoys gaming and passionate in Game Development.
-
-Currently residing in Singapore studying for a Diploma in Immersive Media at Ngee Ann Polytechnic.
+I am Kang Xuan, and I enjoy gaming and have a passion for game development.
 
 ## Over the Years
-Find out what I have accomplished and what I am currently up to.
+Discover my achievements and learn about what I am currently working on.
 
 <div class="timeline p-exclude mt-5">
     <div class="timeline--content">
