@@ -298,6 +298,8 @@ Projects Page Styling
     font-family: "Roboto", sans-serif;
     border: 3px solid #000000cc;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 70% 30%;
     box-shadow: #000000cc 0 3px;
     overflow: hidden;
     transition: 0.15s all ease-in-out;
