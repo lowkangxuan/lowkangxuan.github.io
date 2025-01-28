@@ -12,7 +12,7 @@ tags:
 ---
 
 ## Introduction
-This Waterfall Diorama was created as part of my Year 2.2 module assignment, 3D Environment(3DE), where I was tasked to create this diorama using modular low-poly models with a waterfall present within the diorama. The modular pieces were modeled and textured in Maya and Substance Painter.
+This Waterfall Diorama was created as part of my polytechnic year 2.2 module assignment, 3D Environment(3DE), where I was tasked to create a diorama using modular low-poly models with a waterfall present within the diorama. The modular pieces were modeled and textured in Maya and Substance Painter.
 
 ## Snapshots
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -62,7 +62,7 @@ This Waterfall Diorama was created as part of my Year 2.2 module assignment, 3D 
 I will now be doing a breakdown on how I've made certain aspects of this diorama.
 
 ### Trees and Foliage
-As I was looking for a <mark>Forest</mark> theme for this diorama, multiple low-poly trees and mushrooms were modeled and textured using a single <mark>trimsheet</mark> with only flat colours.
+As I was looking for a <mark>Forest</mark> theme for this diorama, multiple low-poly trees and mushrooms were modeled and textured using a single <mark>texture atlas</mark> with only flat colours.
 
 <figure align = "center">
     <img src="./Trimsheet.png" alt="Model UV Screenshot" style="width:100%">

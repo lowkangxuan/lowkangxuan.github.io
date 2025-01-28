@@ -1,7 +1,7 @@
 ---
 icon: 🌳
 title: Decorator Volume Breakdown
-description: Going through the codes that make the tool work
+description: Behind the scenes of the code that makes the tool work
 thumbnail:
 date: 2024-01-06
 tags:
