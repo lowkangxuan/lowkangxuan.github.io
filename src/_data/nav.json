@@ -2,7 +2,7 @@
     "datas": [
         {
             "url": "/",
-            "name": "Home"
+            "name": "About"
         },
         {
             "url": "/blogs",
