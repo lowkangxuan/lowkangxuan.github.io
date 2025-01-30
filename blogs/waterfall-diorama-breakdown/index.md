@@ -1,6 +1,6 @@
 ---
 icon: 📦
-title: 3D Waterfall Diorama
+title: Waterfall Diorama Breakdown
 description: Waterfall Diorama built in Unity
 thumbnail: ./ForestWaterfall.png
 date: 2022-01-19

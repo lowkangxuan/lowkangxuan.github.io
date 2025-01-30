@@ -1,5 +1,6 @@
 ---
 layout: blog.njk
+submain: altmain
 title: Blogs
 icon: 📋
 pagination:
@@ -24,18 +25,18 @@ The following list comprises the {{blogs.length}} blogs I have written.
     {%- endfor %}
 </div>
 
-<div class="project-list d-flex flex-column justify-content-center gap-3 py-4 pt-3">
+<div class="blog-list py-4 pt-3">
     {% for blog in blogs -%}
-        <article class="project-box p-exclude">
+        <article class="blog-box p-exclude {{ 'item-1' if loop.first }}">
             {%- if blog.data.thumbnail -%}
-            <div class="project-box-thumbnail">
+            <div class="blog-box-thumbnail">
                 <img src="{{blog.url}}/{{blog.data.thumbnail}}"></img>
             </div>
             {%- endif -%}
-            <div class="project-box-info">
+            <div class="blog-box-info">
                 <h5>{{blog.data.icon}} {{blog.data.title}}</h5>
-                <p class="project-description mt-0 mb-3 ff-firacode">{{blog.data.description}}</p>
-                <div class="gap-1 align-items-center project-tags">
+                <p class="blog-description my-0 ff-firacode">{{blog.data.description}}</p>
+                <div class="gap-1 align-items-center blog-tags">
                     {% for tag in blog.data.tags -%}
                         {% if tag != "blogs" -%}
                             <div class="tag tag-{{tag}}"><span>{{ tag }}</span></div>
