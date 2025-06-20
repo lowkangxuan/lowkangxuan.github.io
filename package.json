@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "npx eleventy",
+    "build": "npx @11ty/eleventy",
     "production": "NODE_ENV=production eleventy"
   },
   "keywords": [],
