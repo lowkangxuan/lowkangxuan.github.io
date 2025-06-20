@@ -6,7 +6,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "production": "NODE_ENV=production eleventy"
+    "production": "NODE_ENV=production eleventy",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/lowkangxuan.github.io/"
   },
   "keywords": [],
   "author": "",
