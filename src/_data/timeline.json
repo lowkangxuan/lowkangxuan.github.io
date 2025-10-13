@@ -1,6 +1,12 @@
 {
     "infos": [
         {
+            "title": "📚 Nanyang Technological University",
+            "position": "Bachelor of Computing | Computer Science",
+            "description": "Currently studying in NTU for a bachelor's degree in Computer Science",
+            "year": "2025 - 2029"
+        },
+        {
             "title": "📆 9-month Internship",
             "position": "TrueWorld Studios | Developer",
             "description": "Worked on the company's inaugural IP, UNYIELDER.",
